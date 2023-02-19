@@ -37,19 +37,30 @@ you = game[you_chose]
 
 print(f"{you} /n Computer chose: {computer}\n ")
 
-if you_chose >= 3 or you_chose < 0: 
-  print("You typed an invalid number, you lose!") 
-elif you_chose == 0 and computer_chose == 2:
-  print("You win!")
-elif computer_chose == 0 and you_chose == 2:
-  print("You lose")
-elif computer_chose > you_chose:
-  print("You lose")
-elif you_chose > computer_chose:
-  print("You win!")
-elif computer_chose == you_chose:
-  print("It's a draw")
+result = you_chose - computer_chose
 
+# if you_chose >= 3 or you_chose < 0: 
+#   print("You typed an invalid number, you lose!") 
+# elif you_chose == 0 and computer_chose == 2:
+#   print("You win!")
+# elif computer_chose == 0 and you_chose == 2:
+#   print("You lose")
+# elif computer_chose > you_chose:
+#   print("You lose")
+# elif you_chose > computer_chose:
+#   print("You win!")
+# elif computer_chose == you_chose:
+#   print("It's a draw")
+
+
+if you_chose >= 3 or you_chose < 0: 
+  print("You typed an invalid number, you lose!")
+elif result == 0:
+    print("It's a draw")
+elif result < 0:
+    print("You lose")
+elif result > 0:
+    print("You win!")
     
 
 
